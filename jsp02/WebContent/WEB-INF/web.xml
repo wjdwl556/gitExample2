@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>IdCheck</display-name>
+  
+  <servlet>
+  <servlet-name>checkid</servlet-name>
+  <servlet-class>check.IdCheckController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>checkid</servlet-name>
+  <url-pattern>/checkid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>board</servlet-name>
+    <servlet-class>board.BoardController</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>board</servlet-name>
+    <url-pattern>/board_servlet/*</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config>
+  <!-- Disables URL-based sessions (no more 'jsessionid' in the URL using Tomcat) -->
+  <tracking-mode>COOKIE</tracking-mode>
+</session-config>
+</web-app>
